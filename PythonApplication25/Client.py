@@ -9,7 +9,6 @@ class ChatClient:
         self.is_running = True
 
     def establish_connection(self):
-        """Пытается подключиться к серверу до победного."""
         print(f"[*] Подключение к {self.address[0]}:{self.address[1]}...")
         while True:
             try:
@@ -22,7 +21,6 @@ class ChatClient:
                 time.sleep(2)
 
     def _listen_to_server(self):
-        """Фоновый поток для приема сообщений."""
         while self.is_running:
             try:
                 payload = self.sock.recv(1024)
