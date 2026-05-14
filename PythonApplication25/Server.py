@@ -3,7 +3,7 @@ import threading
 import sys
 
 class SimpleTcpServer:
-    def __init__(self, host='127.0.0.1', port=4000):
+    def __init__(self, host='127.0.0.1', port=1234):
         self.addr = (host, port)
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
